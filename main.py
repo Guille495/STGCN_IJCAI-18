@@ -13,7 +13,7 @@ from os.path import join as pjoin
 
 import tensorflow as tf
 
-config = tf.compat.v1.Session.ConfigProto()
+config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True
 tf.Session(config=config)
 
