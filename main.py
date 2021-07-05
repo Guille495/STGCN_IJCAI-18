@@ -11,9 +11,10 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from os.path import join as pjoin
 
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
-config = tf.compat.v1.ConfigProto()
+config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 tf.Session(config=config)
 
